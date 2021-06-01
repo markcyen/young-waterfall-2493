@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @movie.title %></title>
+    <h2>Year: <%= @movie.creation_year %> </h2>
+    <h2>Genre: <%= @movie.genre %> </h2>
+  </head>
+  <body>
+    <section>
+      <h3>Actors in <%= @movie.title %> </h3>
+      <% @actors.each do |actor| %>
+        <%= actor.name %><br>
+      <% end %>
+    </section>
+  </body>
+</html>
