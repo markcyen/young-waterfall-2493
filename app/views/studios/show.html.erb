@@ -6,6 +6,9 @@
     <h2><%= @studio.location %></h2>
   </head>
   <body>
-
+    <h3><%= @studio.name %>'s Movies</h3><br>
+    <% @studio_movies.each do |movie| %>
+      <%= movie.title %><br>
+    <% end %>
   </body>
 </html>
