@@ -12,6 +12,17 @@
       <% @actors.each do |actor| %>
         <%= actor.name %><br>
       <% end %>
+    </section><br>
+
+    <section>
+      <div>Add Actor to <%= @movie.title %>:</div><br>
+      <%= form_with url: "/movies/#{@movie.id}", method: :get, local: true do |f| %>
+        <% @all_actors.each do |thespian| %>
+          <%= f.label :actor_name, "Actor Name:" %>
+          <%= f.text_field :actor_name %>
+          <%= f.submit "Submit" %>
+        <% end %>
+      <% end %>
     </section>
   </body>
 </html>
